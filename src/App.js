@@ -22,7 +22,7 @@ class App extends Component{
     return (
       <Fragment>
         <div>
-        <Header></Header>
+        <Header heading="Phone Directory"></Header>
         <div className="component-body-container">
           <button className="custom-btn add-btn">Add</button>
 
