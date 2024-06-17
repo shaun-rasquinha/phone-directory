@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import { Fragment } from "react";
+import Header from "./Header";
 
 
 class App extends Component{
@@ -7,9 +8,7 @@ class App extends Component{
     return (
       <Fragment>
         <div>
-        <div className="header">
-          Phone Directory
-        </div>
+        <Header></Header>
         <button>
           Add
         </button>
