@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import { Fragment } from "react";
 import Header from "./Header";
+import './App.css'
 
 
 class App extends Component{
@@ -9,15 +10,14 @@ class App extends Component{
       <Fragment>
         <div>
         <Header></Header>
-        <button>
-          Add
-        </button>
-        <div>
-          <span>Name </span>
-          <span>Phone </span>
+        <div className="component-body-container">
+          <button className="custom-btn add-btn">Add</button>
+
+          <div className="grid-container heading-container">
+            <span className="grid-item name-heading">Name</span>
+            <span className="grid-item phone-heading">Phone</span>
+          </div>
         </div>
-        <label htmlFor="name">Name:</label>
-        <input id="name" type="text" placeholder="Type here" defaultValue={"Shilpa"}></input>
         </div>
       </Fragment>
       
