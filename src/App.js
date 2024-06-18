@@ -3,22 +3,28 @@ import { Fragment } from "react";
 import Header from "./Header";
 import './App.css'
 
+// let subscriber = [
+    //   {
+    //     id: 1,
+    //     name: "Shilpa Bhat",
+    //     phone: "8888888888"
+    //   },
+    //   {
+    //     id: 2,
+    //     name: "Srishti",
+    //     phone: "9999999999"
+    //   }
+    // ]
 
 class App extends Component{
-   render() {
 
-    let subscriber = [
-      {
-        id: 1,
-        name: "Shilpa Bhat",
-        phone: "8888888888"
-      },
-      {
-        id: 2,
-        name: "Srishti",
-        phone: "9999999999"
-      }
-    ]
+  constructor(){
+    super();
+    this.state = {
+      subscribersListToShow: []
+    }
+  }
+   render() {
     return (
       <Fragment>
         <div>
@@ -31,7 +37,7 @@ class App extends Component{
             <span className="grid-item phone-heading">Phone</span>
           </div>
           {
-            subscriber.map(sub =>{
+            this.state.subscribersListToShow.map(sub =>{
               return <div key={sub.id} className="grid-container">
                 <span className="grid-item">{sub.name}</span>
                 <span className="grid-item">{sub.phone}</span>
