@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import { Fragment } from "react";
 import Header from "./Header";
-import './App.css'
+import './ShowSubscriber.css'
 
 // let subscriber = [
     //   {
@@ -16,14 +16,9 @@ import './App.css'
     //   }
     // ]
 
-class App extends Component{
+class ShowSubscriber extends Component{
 
-  constructor(){
-    super();
-    this.state = {
-      subscribersListToShow: []
-    }
-  }
+
    render() {
     return (
       <Fragment>
@@ -37,7 +32,7 @@ class App extends Component{
             <span className="grid-item phone-heading">Phone</span>
           </div>
           {
-            this.state.subscribersListToShow.map(sub =>{
+            this.props.subscribersList.map(sub =>{
               return <div key={sub.id} className="grid-container">
                 <span className="grid-item">{sub.name}</span>
                 <span className="grid-item">{sub.phone}</span>
@@ -57,4 +52,4 @@ class App extends Component{
 }
 
 
-export default App;
+export default ShowSubscriber;
